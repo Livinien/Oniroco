@@ -83,6 +83,66 @@ body {
 
 
 
+/*  CORPS DE LA PAGE */
+
+
+.container {
+
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+}
+
+
+.photo {
+
+    background: rgba(24, 1, 20, 0.651);
+    margin: 60px;
+    margin-top: 100px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+
+
+.photo img {
+
+    display: flex;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+    width: 300px;
+
+}
+
+
+.description h1, p, strong {
+
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin: 20px;
+
+}
+
+
+.boutton {
+
+    display: flex;
+    font-family: 'poppins', sans-serif;
+    font-size: 14px;
+    margin: 25px;
+    margin-left: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgb(236, 94, 217);
+    border: none;
+    color: #fff;
+
+}
+
+
+
 
 
 
