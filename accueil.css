@@ -32,7 +32,7 @@ body {
 }
 
 
-.presentation img {
+.presentation img  {
 
     width: 200px;
     
@@ -102,6 +102,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 10px;
+    
 }
 
 
@@ -111,19 +112,22 @@ body {
 
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    border-radius: 10px 10px 0 0;
     width: 300px;
 
 }
 
 
-.camera1 {
+.camera1, .camera2, .camera3, .camera4, .camera5 {
 
     background: rgba(24, 1, 20, 0.651);
+    margin-top: 50px;
     border-radius: 10px;
-    
-    
+    width: 300px;
+    color: #fff;
+      
 }
+
 
 
 
@@ -272,13 +276,35 @@ span {
     
 }
 
-{
 
-    display: flex;
-    margin-top: 10px;
-    cursor: pointer;
-    
+
+
+
+/* FOOTER */
+
+
+footer {
+
+    background: rgba(24, 1, 20, 0.651);
+    margin-top: 70px;
 }
 
 
+.info ul  {
+
+    list-style-type: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.info a {
+
+    
+    text-decoration: none;
+    color: #fff;
+    margin-top: 10px;
+
+}
 
