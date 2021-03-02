@@ -94,7 +94,7 @@ body {
 
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 50px;
     
 }
 
@@ -107,7 +107,7 @@ body {
     justify-content: center;
     border-radius: 10px 10px 0 0;
     width: 300px;
-
+    
 }
 
 
@@ -255,14 +255,15 @@ span {
 
     display: flex;
     cursor: pointer;
-    
+    height: 200px;
+    object-fit: cover;
 }
 
 
 .camera5 p, strong, span {
 
     display: flex;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 20px;
     cursor: pointer;
     
@@ -279,7 +280,7 @@ span {
 footer {
 
     background: rgba(24, 1, 20, 0.651);
-    margin-top: 70px;
+    margin-top: 245px;
 }
 
 

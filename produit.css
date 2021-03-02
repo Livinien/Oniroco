@@ -86,22 +86,33 @@ body {
 /*  CORPS DE LA PAGE */
 
 
+
+.produit h1 {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+
 .container {
 
     display: flex;
-    flex-direction: column;
-    margin: 10px;
+    justify-content: center;
+    
 
 }
 
 
 .photo {
 
+    
     background: rgba(24, 1, 20, 0.651);
-    margin: 60px;
-    margin-top: 100px;
+    margin-top: 50px;
     border-radius: 10px;
     width: 300px;
+    height: 600px;
 }
 
 
@@ -116,7 +127,7 @@ body {
 }
 
 
-.description h1, p, strong {
+.photo h2, p, strong {
 
     display: flex;
     flex-direction: column;
@@ -135,9 +146,10 @@ body {
     margin-left: 30px;
     padding: 10px;
     border-radius: 10px;
-    background: rgb(236, 94, 217);
+    background: rgb(238, 111, 61);
     border: none;
     color: #fff;
+    cursor: pointer;
 
 }
 
@@ -156,13 +168,14 @@ footer {
 
     background: rgba(24, 1, 20, 0.651);
     margin-top: 70px;
+    
 }
 
 
 .info ul  {
 
     list-style-type: none;
-    padding: 20px;
+    padding: 20px 0px 0px 10px;
     display: flex;
     flex-direction: column;
 }
