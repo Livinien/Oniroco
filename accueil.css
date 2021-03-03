@@ -274,11 +274,27 @@ span {
 
 .boutton {
 
-    display: flex;
-    justify-content: center;
-    
+  
+    font-family: 'poppins', sans-serif;
+    font-size: 14px;
+    margin: 25px 0 25px 90px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgb(235, 66, 0);
+    border: none;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 
 }
+
+
+.boutton:hover {
+
+    background: rgb(238, 111, 61);
+
+}
+
 
 
 

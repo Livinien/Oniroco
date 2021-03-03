@@ -137,7 +137,7 @@ body {
 }
 
 
-button {
+.boutton {
 
     display: flex;
     font-family: 'poppins', sans-serif;
