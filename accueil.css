@@ -272,6 +272,16 @@ span {
 
 
 
+.boutton {
+
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+
+
 
 
 /* FOOTER */

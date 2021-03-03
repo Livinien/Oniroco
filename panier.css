@@ -83,11 +83,18 @@ body {
 
 
 
-.container h1 {
+.panier h1 {
 
     display: flex;
     justify-content: center;
     margin-top: 50px;
+
+}
+
+
+.container {
+
+    margin: 0.5rem;
 
 }
 
@@ -97,11 +104,17 @@ body {
 .table {
 
     background: rgb(238, 166, 98);
-    width: 50%;
     margin-top: 30px;
     box-shadow: 0 0 20px rgb(0, 0, 0, 0.15);
     width: 100%;
     border-collapse: collapse;
+
+}
+
+
+th:nth-child(1) {
+
+    width: 35%;
 
 }
 
@@ -168,9 +181,9 @@ form {
 }
 
 
-.labelEmail {
+.Email {
 
-    margin-left: 10px;
+    margin-left: 30px;
 
 }
 
@@ -211,17 +224,18 @@ form {
 
 .labelFlax {
 
-    margin-left: 10px;
+    margin-left: 30px;
+    
 
 }
 
 
 
-button {
+.boutton {
 
     display: block;
     justify-content: center;
-    width: 85%;
+    width: 90%;
     margin: 45px auto 0 auto;
     outline: 0;
     height: 50px;
@@ -236,7 +250,7 @@ button {
 }
 
 
-button:hover {
+.boutton:hover {
 
     background: rgb(122, 19, 119);
 

@@ -137,7 +137,7 @@ body {
 }
 
 
-.boutton {
+button {
 
     display: flex;
     font-family: 'poppins', sans-serif;
@@ -146,13 +146,20 @@ body {
     margin-left: 30px;
     padding: 10px;
     border-radius: 10px;
-    background: rgb(238, 111, 61);
+    background: rgb(235, 66, 0);
     border: none;
     color: #fff;
+    transition: all 0.2s ease-in-out;
     cursor: pointer;
 
 }
 
+
+.boutton:hover {
+
+    background: rgb(238, 111, 61);
+
+}
 
 
 
