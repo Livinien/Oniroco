@@ -1,0 +1,29 @@
+@media (min-width: 700px) {
+
+    footer {
+
+        margin-top: 280px;
+
+    }
+
+
+    .info ul {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 270px;
+        padding: 20px;
+    }
+
+
+    .info a {
+
+        display: flex;
+        margin-left: 40px;
+
+    }
+
+
+
+}

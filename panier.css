@@ -79,10 +79,11 @@ body {
 
 
 
-/* CORPS DE LA PAGE */
+/* LISTE */
 
 
-.panier h1 {
+
+.container h1 {
 
     display: flex;
     justify-content: center;
@@ -91,26 +92,185 @@ body {
 }
 
 
-table {
 
-    display: flex;
-    justify-content: center;
-    border-collapse: collapse;
+
+.table {
+
+    background: rgb(238, 166, 98);
+    width: 50%;
     margin-top: 30px;
     box-shadow: 0 0 20px rgb(0, 0, 0, 0.15);
+    width: 100%;
+    border-collapse: collapse;
 
 }
 
 
-th {
+.table th, .table td {
 
-    padding: 20px;
+    border: 1px solid #000;
+    
+
+}
+
+.table th {
+
+    background: rgb(83, 9, 102);
+    color: #fff;
+
+}
+
+
+thead th {
+
+    padding: 15px;
 
 }
 
 
 tbody td {
 
+    padding: 10px;
+
+}
+
+
+
+
+
+
+/* COMMANDE */
+
+
+.commande {
+
+    background: rgb(238, 111, 61);
+    margin-top: 90px;
+    padding: 30px;
+    width: 100%;
+
+}
+
+
+.commande h2 {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+form {
+
+    margin-top: 50px;
+
+}
+
+
+.labelEmail {
+
+    margin-left: 10px;
+
+}
+
+
+.emailInp {
+
+    display: block;
+    justify-content: center;
+    margin: 20px auto;
+    outline: 0;
+    background: #f1f1f1;
+    width: 90%;
+    border: 0;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 5px;
+
+}
+
+
+
+
+.flexInp {
+
+    display: block;
+    justify-content: center;
+    margin: 20px auto;
+    outline: 0;
+    background: #f1f1f1;
+    width: 90%;
+    border: 0;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 5px;
+
+}
+
+
+.labelFlax {
+
+    margin-left: 10px;
+
+}
+
+
+
+button {
+
+    display: block;
+    justify-content: center;
+    width: 85%;
+    margin: 45px auto 0 auto;
+    outline: 0;
+    height: 50px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 17px;
+    background: rgb(45, 5, 46);
+    color: #fff;
+    border: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+
+button:hover {
+
+    background: rgb(122, 19, 119);
+
+}
+
+
+
+
+
+
+/* FOOTER */
+
+
+footer {
+
+    background: rgba(24, 1, 20, 0.651);
+    margin-top: 245px;
+}
+
+
+.info ul  {
+
+    list-style-type: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.info a {
+
     
-    
+    text-decoration: none;
+    color: #fff;
+    margin-top: 10px;
+
 }

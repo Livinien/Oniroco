@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="media.css">
     <link rel="stylesheet" href="panier.css">
+    <link rel="stylesheet" href="media3.css">
     <link rel="shortcut icon" type="image/png" href="/Images/Favicon.jpg">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -59,96 +59,178 @@
 
 
     <section class="panier">
+        
 
         <h1>Panier</h1>
 
 
-        <table>
+        <div class="container">
 
-            <thead>
+                        
+            <table class="table">
 
-                <tr>
+                <thead>
 
-                    <th>Produit</th>  
-                    <th>Quantité</th>  
-                    <th>Prix</th>  
+                    <th>Produit</th>
+                    <th>Quantité</th>
+                    <th>Prix</th>
+                
+                </thead>
 
-                </tr>
+                <tbody>
 
-            </thead>
+                    <tr>
 
-            <tbody>
+                        <td class="label">Zeiss Ikon</td>
+                        <td class="label"></td>
+                        <td class="label">80.99 €</td>
+                        
 
-                <tr>
-
-                    <td>Zeiss Ikon</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-
-                </tr>
-
-                <tr>
+                    </tr>
 
 
-                    <td>Nikon</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    
+
+                    <tr>
+
+                        <td class="label">Nikon</td>
+                        <td class="label"></td>
+                        <td class="label">70.99 €</td>
+                        
+
+                    </tr>
 
 
-                </tr>
+                    <tr>
 
-                <tr>
+                        <td class="label">Pocket Kodak</td>
+                        <td class="label"></td>
+                        <td class="label">150.99 €</td>
+                        
 
-                    <td>Pocket Kodak</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-
-
-                </tr>
-
-                <tr>
-
-                    <td>Minolta</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    </tr>
 
 
-                </tr>
+                    <tr>
 
-                <tr>
+                        <td class="label">Minolta</td>
+                        <td class="label"></td>
+                        <td class="label">90.99 €</td>
+                        
 
-                    <td>Samsung</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-
-
-                </tr>
+                    </tr>
 
 
+                    <tr>
 
-            </tbody>
+                        <td class="label">Samsung</td>
+                        <td class="label"></td>
+                        <td class="label">100 €</td>
+                        
+
+                    </tr>
+
+                </tbody>
+
+
+            </table>
 
 
 
+            <section class="commande">
 
-        </table>
+                <h2>Votre Commande</Canvas></h2>
 
+
+                <form action="">
+
+                    <label for="email" class="labelEmail">Votre Email</label>
+                    <input type="email" name="email" id="email" class="emailInp"  requied maxlenght = "50" placeholder="Entrez votre email">
+
+
+                    <div class="input">
+
+                        <div class="flexLeftInp">
+
+                            <label for="prenom" class="labelFlax">Prénom</label>
+                            <input type="text" name="prenom" id="prenom" required maxlength="35" class="flexInp" placeholder="Entrez votre prénom">
+
+                        </div>
+
+                        <div class="flexRightInp">
+
+                            <label for="nom" class="labelFlax">Nom</label>
+                            <input type="text" name="nom" id="nom" required maxlength="35" class="flexInp" placeholder="Entrez votre nom">
+
+                        </div>
+
+
+                        <div class="adresse">
+
+                            <label for="adresse" class="labelFlax">Adresse</label>
+                            <input type="text" name="adresse" id="adresse" required maxlength="35" class="flexInp" placeholder="Entrez votre adresse postale">
+
+                        </div>
+
+
+                        <div class="flexLeftInp">
+
+                            <label for="code" class="labelFlax">Code Postal</label>
+                            <input type="text" name="code" id="code" required maxlength="35" class="flexInp" placeholder="Entrez votre code postal">
+
+                        </div>
+
+
+                        <div class="flexRightInp">
+
+                            <label for="ville" class="labelFlax">Ville</label>
+                            <input type="text" name="ville" id="ville" required maxlength="35" class="flexInp" placeholder="Entrez votre ville">
+
+                        </div>
+
+
+                        <button>Accéder au payement</button>
+
+
+                    </div>
+
+
+                </form>
+
+            </section>
+
+            
+        </div>
 
 
     </section>
 
 
 
+    <footer>
+
+        <div class="info">
+
+            <ul>
+
+                <li>
+                    <a href="conditions">Conditions Générales</a>
+                </li>
+
+                </li>
+                    <a href="propos">À Propos</a>
+                </li>
+
+                </li>
+                    <a href="contact">Nous Contacter</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </footer>
 
 
 </body>

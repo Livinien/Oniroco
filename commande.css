@@ -1,0 +1,47 @@
+
+*, ::before, ::after {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+body {
+
+    background: #eec0ee;
+    font-family: 'poppins', sans-serif;
+}
+
+
+
+
+
+/* FOOTER */
+
+
+footer {
+
+    background: rgba(24, 1, 20, 0.651);
+    margin-top: 245px;
+}
+
+
+.info ul  {
+
+    list-style-type: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.info a {
+
+    
+    text-decoration: none;
+    color: #fff;
+    margin-top: 10px;
+
+}
