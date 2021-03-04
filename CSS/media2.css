@@ -1,0 +1,80 @@
+
+
+/* PAGE PRODUIT - PAGE 2 */
+
+
+
+@media (min-width: 800px) {
+
+   
+    .produit h1 {
+
+        font-size: 25px;
+
+    }
+
+
+
+    .photo {
+    
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        margin-right: 5px;
+        width: 800px;
+        height: 350px;
+    }
+    
+    
+    
+    .photo img {
+    
+        
+        border-radius: 10px 0px 0 10px;
+        width: 350px;
+        object-fit: cover;
+    
+    }
+    
+ 
+ 
+    .boutton {
+
+        margin-left: 30px;
+        margin-top: 40px;
+        width: 330px;
+        font-size: 20px;
+    }
+
+
+    footer {
+
+        margin-top: 280px;
+
+    }
+
+
+    .info ul {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 270px;
+        padding: 20px;
+    }
+
+
+    .info a {
+
+        display: flex;
+        margin-left: 40px;
+
+    }
+
+ 
+    
+ 
+ 
+ }
+
+
