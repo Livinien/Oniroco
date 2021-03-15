@@ -1,0 +1,111 @@
+
+/* PAGE D'ACCUEIL - PAGE 1 */
+
+@media screen and (min-width: 320px) {
+
+    #main {
+
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+}
+
+
+@media screen and (min-width: 760px) {
+
+    #main {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+
+    .photo {
+
+        margin: 50px 20px 0 0;
+
+    }
+
+ 
+
+}
+
+
+
+@media screen and (min-width: 900px) {
+
+   
+    #main {
+
+        display: flex;
+        justify-content: center;
+       
+
+    }
+
+    .photo {
+
+        margin: 50px 20px 0 0;
+
+    }
+
+ 
+
+}
+
+
+
+
+
+
+@media screen and (min-width: 620px) {
+
+    
+
+
+    .info ul {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+
+    }
+
+
+    .info a {
+
+        display: flex;
+        margin-left: 40px;
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+/* PAGE PRODUIT - PAGE 2 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
