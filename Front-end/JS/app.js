@@ -16,8 +16,7 @@ fetch('http://localhost:3000/api/cameras')
             main.appendChild(camera);
 
             
-            
-
+        
 
             let image = document.createElement('img');
             image.setAttribute("class", 'image');

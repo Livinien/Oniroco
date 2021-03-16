@@ -54,6 +54,11 @@
     }
 
  
+    .description {
+
+        color: #fff;
+
+    }
 
 }
 
@@ -82,6 +87,7 @@
         margin-left: 40px;
 
     }
+
 
 
 
