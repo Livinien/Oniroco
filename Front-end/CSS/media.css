@@ -26,9 +26,11 @@
 
     .photo {
 
+        
         margin: 50px 20px 0 0;
 
     }
+
 
  
 
@@ -102,8 +104,253 @@
 /* PAGE PRODUIT - PAGE 2 */
 
 
+@media screen and (min-width: 320px) {
+
+    .camera {
+
+        display: flex;
+        justify-content: center;
+        margin: 100px;
+        
+    }
 
 
+
+    .picture {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px 10px 10px 10px;
+        border: 1px solid black;  
+        background: rgba(26, 25, 25, 0.842);
+        width: 300px;
+       
+    }
+
+
+    .image2 {
+
+        border-radius: 10px 10px 0 0px;
+        height: 400px;
+        width: 298px;
+        object-fit: cover;
+        
+    
+    }
+    
+
+
+    
+    .image2 img {
+    
+        height: 900px;
+        width: 500px;
+        
+    
+    }
+
+
+
+    .name2 {
+
+        font-size: 30px;
+        font-weight: bold;
+        margin: 10px;
+        color: rgba(255, 255, 255, 0.842);
+        margin: 20px 0 0 10px;
+
+    }
+
+
+    .price2 {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px;
+        color: rgba(255, 255, 255, 0.842);
+        margin: 20px 0 0 10px;
+
+    }
+
+
+    #liste {
+
+        border-radius: 5px 5px 5px 5px;
+        padding: 10px 0px 10px 10px;
+        margin: 10px;
+        width: 130px;
+
+    }
+
+
+    
+
+
+    .btn-produit {
+
+        display: flex;
+        justify-content: center;
+
+    }
+
+
+
+    .btn-produit2 {
+
+        margin-top: 110px;
+        
+        
+
+    }
+
+
+
+
+
+}
+
+
+
+
+@media screen and (min-width: 500px) { 
+
+    .picture {
+
+        display: flex;
+        justify-content: center;
+        width: 450px;
+
+    }
+
+
+    .image2 {
+
+        border-radius: 10px 10px 0 0px;
+        height: 400px;
+        width: 448px;
+        object-fit: cover;
+        
+    
+    }
+
+
+    .btn-produit2 {
+
+        display: flex;
+        justify-content: center;
+        margin-top: 110px;
+        width: 96%;
+        
+
+    }
+
+
+    #liste {
+
+        border-radius: 5px 5px 5px 5px;
+        padding: 10px 0px 10px 10px;
+        margin: 10px;
+        width: 200px;
+
+    }
+
+
+}
+
+
+
+
+@media screen and (min-width: 1000px) {
+
+
+    .camera {
+
+        margin: 100px;
+        
+    }
+
+
+
+    .picture {
+
+        
+        border-radius: 10px 10px 10px 10px;
+        border: 1px solid black;  
+        background: rgba(26, 25, 25, 0.842);
+        width: 950px;
+        
+    }
+
+
+    .image2 {
+
+       
+        border-radius: 10px 10px 0 0px;
+        height: 400px;
+        width: 948px;
+        object-fit: cover;
+        
+    
+    }
+    
+
+
+
+    .name2 {
+
+        font-size: 30px;
+        font-weight: bold;
+        margin: 10px;
+        color: rgba(255, 255, 255, 0.842);
+        margin: 20px 0 0 10px;
+
+    }
+
+
+    .price2 {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.842);
+        margin: 20px 0 0 10px;
+
+    }
+
+
+  
+    
+    .btn-produit2 {
+
+        display: flex;
+        justify-content: center;
+        width: 98%;
+        
+
+    }
+
+
+
+    #liste {
+
+        border-radius: 5px 5px 5px 5px;
+        padding: 10px 0px 10px 10px;
+        margin: 10px;
+        width: 300px;
+
+    }
+
+
+
+   
+
+}
 
 
 

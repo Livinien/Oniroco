@@ -121,7 +121,6 @@ h1 {
 
 
 
-
 .nom {
    
     font-size: 30px;
@@ -137,6 +136,15 @@ h1 {
     font-weight: bold;
     margin: 10px;
     color: rgba(255, 255, 255, 0.842);
+
+}
+
+
+
+.description {
+
+    margin: 10px;
+    color: #fff;
 
 }
 
@@ -187,6 +195,38 @@ h1 {
 
 
 }
+
+
+
+.btn-produit2 {
+
+    
+    width: 17%;
+    padding: 10px;
+    font-family: 'poppins', sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 0;
+    color: #fff;
+    background-color: rgb(180, 55, 6);
+    width: 278px;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+
+.btn-produit2:hover {
+
+    background-color: rgb(182, 74, 31);
+    
+
+
+}
+
+
+
+
 
 
 
@@ -273,6 +313,14 @@ footer {
         width: 278px;
         
     
+    }
+
+
+    .camera {
+
+        display: flex;
+        justify-content: center;
+
     }
     
 
