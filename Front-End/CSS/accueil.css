@@ -1,0 +1,338 @@
+*, ::before, ::after {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+body {
+
+    background: #eec0ee;
+    font-family: 'poppins', sans-serif;
+}
+
+
+
+
+
+
+/* HEADER */
+
+
+
+.presentation {
+
+    background: rgba(24, 1, 20, 0.651);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+
+.presentation img  {
+
+    width: 200px;
+    
+}
+
+
+
+.liens {
+
+    display: flex;
+    width: 150px;
+    font-size: 20px;
+    
+    
+}
+
+
+.liens ul {
+
+    display: flex;
+    list-style-type: none;
+    
+    
+}
+
+.liens a {
+
+    display: flex;
+    text-decoration: none;
+    margin-left: 15px;
+    color: #fff;
+    
+}
+
+
+.liens i {
+
+    font-size: 25px;
+    width: 40px;
+    
+}
+
+
+
+/* CORPS DE LA PAGE */
+
+
+
+.photo h1 {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+
+
+.container {
+
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    
+}
+
+
+
+
+.container img {
+
+    display: flex;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+    width: 300px;
+    
+}
+
+
+.camera1, .camera2, .camera3, .camera4, .camera5 {
+
+    background: rgba(24, 1, 20, 0.651);
+    margin-top: 50px;
+    border-radius: 10px;
+    width: 300px;
+    color: #fff;
+      
+}
+
+
+
+
+.camera1 img {
+
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+
+.camera1 p, strong, span {
+
+    display: flex;
+    margin-top: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    
+}
+
+
+span {
+
+    padding-bottom: 10px;
+
+}
+
+
+
+
+.camera2 {
+
+    background: rgba(24, 1, 20, 0.651);
+    border-radius: 10px;
+    
+    
+}
+
+
+
+.camera2 img {
+
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+.camera2 p, strong, span {
+
+    display: flex;
+    margin-top: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    
+    
+}
+
+
+
+.camera3 {
+
+    background: rgba(24, 1, 20, 0.651);
+    border-radius: 10px;
+    
+    
+}
+
+
+
+.camera3 img {
+
+    display: flex;
+    cursor: pointer;
+    
+}
+
+
+.camera3 p, strong, span {
+
+    display: flex;
+    margin-top: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    
+    
+}
+
+
+
+.camera4 {
+
+    background: rgba(24, 1, 20, 0.651);
+    border-radius: 10px;
+    
+    
+}
+
+
+
+.camera4 img {
+
+    display: flex;
+    cursor: pointer;
+    
+}
+
+
+.camera4 p, strong, span {
+
+    display: flex;
+    margin-top: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    
+    
+}
+
+
+
+.camera5 {
+
+    background: rgba(24, 1, 20, 0.651);
+    border-radius: 10px;
+    
+    
+}
+
+
+.camera5 img {
+
+    display: flex;
+    cursor: pointer;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.camera5 p, strong, span {
+
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    
+    
+}
+
+
+
+.boutton {
+
+  
+    font-family: 'poppins', sans-serif;
+    font-size: 14px;
+    margin: 25px 0 25px 90px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgb(235, 66, 0);
+    border: none;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+
+
+.boutton:hover {
+
+    background: rgb(238, 111, 61);
+
+}
+
+
+a {
+
+    text-decoration: none;
+    color: #fff;
+
+}
+
+
+
+
+
+
+/* FOOTER */
+
+
+footer {
+
+    background: rgba(24, 1, 20, 0.651);
+    margin-top: 245px;
+}
+
+
+.info ul  {
+
+    list-style-type: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.info a {
+
+    
+    text-decoration: none;
+    color: #fff;
+    margin-top: 10px;
+
+}
+

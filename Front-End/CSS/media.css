@@ -1,0 +1,158 @@
+
+/* PAGE D'ACCUEIL - PAGE 1 */
+
+
+
+@media (min-width: 320px) {
+
+    .container {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+
+
+    }
+
+
+
+
+
+
+}
+
+
+
+
+@media (min-width: 400px) {
+
+    .container {
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+
+
+    }
+
+
+
+
+}
+
+
+
+
+@media (min-width: 620px) {
+
+    .container {
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+
+
+    }
+
+
+    .camera1, .camera2, .camera3, .camera4, .camera5 {
+
+        margin-left: 25px;
+
+
+    }
+
+
+
+    .info ul {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+
+    }
+
+
+    .info a {
+
+        display: flex;
+        margin-left: 40px;
+
+    }
+
+
+
+}
+
+
+
+
+
+@media (min-width: 768px) {
+
+    .container {
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;     
+
+    }
+
+
+    .camera1, .camera2, .camera3, .camera4, .camera5 {
+
+        margin-left: 25px;
+
+
+    }
+
+
+    #photo {
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+
+    }
+
+
+ 
+
+}
+
+
+
+@media (min-width: 1050px) {
+
+    .container {
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+
+
+    }
+
+
+    .camera1, .camera2, .camera3, .camera4, .camera5 {
+
+        margin-left: 25px;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
