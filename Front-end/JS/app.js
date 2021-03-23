@@ -30,7 +30,7 @@ fetch('http://localhost:3000/api/cameras')
 
             let prix = document.createElement('p');
             prix.setAttribute("class", 'prix');
-            prix.textContent = data[i].price / 100 + '€';
+            prix.textContent = data[i].price / 100 + ' €';
             camera.appendChild(prix);
             
             let produit = document.createElement('button');

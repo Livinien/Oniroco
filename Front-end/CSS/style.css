@@ -226,6 +226,186 @@ h1 {
 
 
 
+/* PANIER */
+
+
+
+.panier h1 {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 25px;
+
+}
+
+
+.container {
+
+    margin: 0.5rem;
+
+}
+
+
+
+
+.table {
+
+    background: rgb(238, 166, 98);
+    margin-top: 30px;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.15);
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+
+th:nth-child(1) {
+
+    width: 35%;
+
+}
+
+
+.table th, .table td {
+
+    border: 1px solid #000;
+    
+
+}
+
+.table th {
+
+    background: rgb(83, 9, 102);
+    color: #fff;
+
+}
+
+
+thead th {
+
+    padding: 15px;
+
+}
+
+
+tbody td {
+
+    padding: 25px;
+
+}
+
+
+
+
+
+
+
+
+/* COMMANDE */
+
+
+.commande {
+
+    background: rgb(238, 111, 61);
+    margin-top: 90px;
+    padding: 30px;
+    width: 100%;
+
+}
+
+
+.commande h2 {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+form {
+
+    margin-top: 50px;
+
+}
+
+
+.Email {
+
+    margin-left: 30px;
+
+}
+
+
+.emailInp {
+
+    display: block;
+    justify-content: center;
+    margin: 20px auto;
+    outline: 0;
+    background: #f1f1f1;
+    width: 90%;
+    border: 0;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 5px;
+
+}
+
+
+
+
+.flexInp {
+
+    display: block;
+    justify-content: center;
+    margin: 20px auto;
+    outline: 0;
+    background: #f1f1f1;
+    width: 90%;
+    border: 0;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 5px;
+
+}
+
+
+.labelFlax {
+
+    margin-left: 30px;
+    
+
+}
+
+
+
+.boutton {
+
+    display: block;
+    justify-content: center;
+    width: 90%;
+    margin: 45px auto 0 auto;
+    outline: 0;
+    height: 50px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 17px;
+    background: rgb(45, 5, 46);
+    color: #fff;
+    border: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+
+.boutton:hover {
+
+    background: rgb(122, 19, 119);
+
+}
+
 
 
 

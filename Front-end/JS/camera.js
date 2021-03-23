@@ -17,15 +17,13 @@ fetch('http://localhost:3000/api/cameras/' + idCamera)
 .then(res => res.json())
 .then(myCamera => {
 
-
     
-    
-    let main = document.querySelector('.camera');
+    let section = document.querySelector('.camera');
 
 
     let camera = document.createElement('div');
     camera.setAttribute("class", 'picture');
-    main.appendChild(camera);
+    section.appendChild(camera);
 
     
 
@@ -42,7 +40,7 @@ fetch('http://localhost:3000/api/cameras/' + idCamera)
 
     let prix = document.createElement('p');
     prix.setAttribute("class", 'price2');
-    prix.textContent = myCamera.price / 100 + '€';
+    prix.textContent = myCamera.price / 100 + ' €';
     camera.appendChild(prix);
 
     let description = document.createElement('p');
@@ -62,32 +60,68 @@ fetch('http://localhost:3000/api/cameras/' + idCamera)
 
 
         let el = document.createElement("option");
-        liste.appendChild(el);
         el.textContent = myLenses[i];
-        
+        liste.appendChild(el);
 
     }
 
+    
+
+    let boutton = document.createElement('button');
+    boutton.setAttribute("class", 'btn-produit2');
+    boutton.textContent = `Ajouter au Panier`;
+    camera.appendChild(boutton);
 
 
-    let produit = document.createElement('button');
-    produit.setAttribute("class", 'btn-produit2');
-    produit.textContent = `Ajouter au Panier`;
-    camera.appendChild(produit);
+
+    boutton.addEventListener('click', (e) => {
+        
+        
+        const produit = {
+
+            id: myCamera._id,
+            name: myCamera.name,
+            price: myCamera.price,
+            image: myCamera.imageUrl,
+        
+
+        };
 
 
-    produit.addEventListener('click', (e) => {
+        let products = JSON.parse(localStorage.getItem("panier"))
+        
+        if(products) {
+
+            products.push(produit)
+            localStorage.setItem("panier", JSON.stringify(products))
+
+        }
+
+
+
+        else {
+
+            let produitList = []
+            produitList.push(produit)
+            localStorage.setItem("panier", JSON.stringify(produitList))
+        }
+
+
+
         e.preventDefault()
-        window.location.href = 'panier.html';
+
 
         
+        alert("Votre produit a été ajoutée au panier");
+
+        window.location.href = 'panier.html';
+         
+    
 
     });
 
 
 
-        
-   
   
     console.log(myCamera);
 
