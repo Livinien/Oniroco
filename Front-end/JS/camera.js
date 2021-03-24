@@ -81,7 +81,7 @@ fetch('http://localhost:3000/api/cameras/' + idCamera)
 
             id: myCamera._id,
             name: myCamera.name,
-            price: myCamera.price,
+            price: myCamera.price / 100,
             image: myCamera.imageUrl,
         
 

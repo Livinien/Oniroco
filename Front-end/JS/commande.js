@@ -1,3 +1,69 @@
+let monPanier = localStorage.getItem("panier");
+let panierTotal = JSON.parse(monPanier);
+
+
+
+for(let i = 0; i < panierTotal.length; i++) {
+
+    let monTableau = document.getElementById("table");
+    let ligne = monTableau.insertRow(-1);
+    tbody.appendChild(ligne);
+
+
+
+    let cell = ligne.insertCell(0);
+    ligne.appendChild(cell);
+    cell.textContent = panierTotal[i].name;
+
+    let cell1 = ligne.insertCell(1);
+    ligne.appendChild(cell1);
+    let boutton = document.createElement("button");
+    boutton.setAttribute("id", panierTotal[i].id);
+
+    cell1.appendChild(boutton);
+    boutton.textContent = "Supprimer";
+
+    let cell2 = ligne.insertCell(2);
+    ligne.appendChild(cell1);
+    cell2.textContent = panierTotal[i].price + " €";
+
+  
+
+    let bouttonSupprimer = document.getElementById(panierTotal[i].id);
+    bouttonSupprimer.addEventListener("click", function() {
+
+    localStorage.setItem("panier",JSON.stringify(panierTotal[i]));
+    localStorage.removeItem(panierTotal[0]);
+
+
+
+
+    });
+
+
+    console.log(bouttonSupprimer.id);
+
+
+    
+    console.log(Object.keys("panier"));
+ 
+};
+
+
+
+
+
+
+
+    
+
+  
+    
+
+
+
+
+
 // let form = document.getElementById("formulaire");
 // form.addEventListener("boutton", function() {
 // let nom = document.getElementById("nom");
@@ -20,11 +86,15 @@
 
 
 // let products = [];
+
 //     for(let i in panierFinal) {
 //         products.push(panierFinal[i].id);
 
 
 //     };
+
+
+//     console.log(products);
 
 
 
@@ -66,16 +136,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 // document.getElementById("formulaire").addEventListener("boutton", function() {
 
 //     let contact = {
@@ -99,57 +159,51 @@
 
 
 
-let panier = localStorage.getItem("panier");
-let monPanier = JSON.parse(panier);
-let products = [];
+// let panier = localStorage.getItem("panier");
+// let monPanier = JSON.parse(panier);
+// let products = [];
 
 
-for(let i = 0; i < monPanier.length; i++) {
+// for(let i = 0; i < monPanier.length; i++) {
 
-    products.push(monPanier[i].id);
+//     products.push(monPanier[i].id);
 
-    localStorage.setItem("id", JSON.stringify (products));
-
-
-};
+//     localStorage.setItem("id", JSON.stringify (products));
 
 
-console.log(monPanier);
+// };
 
 
-
-
-
-
-
-fetch('http://localhost:3000/api/cameras/order'), {
-
-    method: "POST",
-    headers: {
-
-        "content-type": "application/json"
-
-    },
-
-    body: send
-
-    // Il va falloir mettre les informations de "contact" et "produit" dans le body.
-
-}
+// console.log(monPanier);
 
 
 
 
 
 
-requete.addEventListener("load", function() {
-alert(requete.responseText);
 
-})
+// fetch('http://localhost:3000/api/cameras/order'), {
 
-let send = JSON.stringify({contact, products});
+//     method: "POST",
+//     headers: {
+
+//         "content-type": "application/json"
+
+//     },
+
+//     body: send
+
+//     // Il va falloir mettre les informations de "contact" et "produit" dans le body.
+
+// }
 
 
-requete.body(send) //boddy récupère la variable de "send"
 
-});
+// requete.addEventListener("load", function() {
+// alert(requete.responseText);
+
+// })
+
+// let send = JSON.stringify({contact, products});
+// requete.body(send) //body récupère la variable de "send"
+

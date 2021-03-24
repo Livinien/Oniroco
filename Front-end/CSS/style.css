@@ -305,6 +305,7 @@ tbody td {
 /* COMMANDE */
 
 
+
 .commande {
 
     background: rgb(238, 111, 61);
@@ -329,6 +330,8 @@ form {
     margin-top: 50px;
 
 }
+
+
 
 
 .Email {
@@ -407,6 +410,20 @@ form {
 }
 
 
+
+#boutton {
+
+    display: flex;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    color: #fff;
+    background: red;
+    margin-left: 30px;
+    font-family: 'poppins', sans-serif;
+    cursor: pointer;
+}
 
 
 
