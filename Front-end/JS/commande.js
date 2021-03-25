@@ -32,8 +32,14 @@ for(let i = 0; i < panierTotal.length; i++) {
     let bouttonSupprimer = document.getElementById(panierTotal[i].id);
     bouttonSupprimer.addEventListener("click", function() {
 
-    localStorage.setItem("panier",JSON.stringify(panierTotal[i]));
-    localStorage.removeItem(panierTotal[0]);
+
+        if(boutton.id === panierTotal[i].id) { 
+            localStorage.getItem("panierTotal")
+            localStorage.removeItem(panierTotal[i]); 
+        
+        
+        }
+
 
 
 
@@ -41,169 +47,150 @@ for(let i = 0; i < panierTotal.length; i++) {
     });
 
 
-    console.log(bouttonSupprimer.id);
-
-
-    
-    console.log(Object.keys("panier"));
+ 
  
 };
 
 
 
+document.getElementById("formulaire").addEventListener("submit", function(e){
 
 
 
 
+let erreur;
+let prenom = document.getElementById("prenom");
+let nom = document.getElementById("nom");
+let adresse = document.getElementById("adresse");
+let ville = document.getElementById("ville");
+let mail = document.getElementById("mail");
+
+
+
+    if(!ville.value) {
+
+        erreur = "Entrez votre ville svp";
+    }
+
+
+    if(!mail.value) {
+
+        erreur = "Entrez votre adresse mail svp";
+        let regMail = /[a-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,4}/;
+    }
+
+    if(!adresse.value) {
+
+        erreur = "Entrez votre adresse postale svp";
+    }
+
+
+    if(!nom.value) {
+
+        erreur = "Entrez votre nom de famille svp";
+    }
+
+
+    if(!prenom.value) {
+
+        erreur = "Entrez votre prénom svp";
+    }
+
+
+
+
+
+
+    if(erreur) {
+
+        e.preventDefault();
+        document.getElementById("erreur").innerHTML = erreur;
+
+        return false;
+    }
+
+
+
+    else {
+
+        alert('PAYMENT PRÊT À ÊTRE ENVOYÉ');
+
+    }
+
+
+
+
+    let contact = {
+
+        firstName: prenom.value,
+        lastName: nom.value,
+        address: adresse.value,
+        city: ville.value,
+        mail: mail.value,
+        
+    };
+
+    localStorage.setItem("contact", JSON.stringify(contact));
+
+
+    let products = [];
+
+    for(let i = 0; i < panierTotal.length; i++) {
+        products.push(panierTotal[i].id);
+        localStorage.setItem("id", JSON.stringify(products));
+
+    };
+
+
+    const request = {
+
+        contact : contact,
+        products : products,
     
-
-  
-    
+    }
 
 
 
 
-
-// let form = document.getElementById("formulaire");
-// form.addEventListener("boutton", function() {
-// let nom = document.getElementById("nom");
-// let prenom = document.getElementById("prenom");
-// let adresse = document.getElementById("adresse");
-// let ville = document.getElementById("ville");
-// let email = document.getElementById("mail");
-
-
-// let contact = {
-
-//     firstName: prenom.value,
-//     lastName: nom.value,
-//     address: adresse.value,
-//     city: ville.value,
-//     email: email.value,
-
-// };
+console.log(request);
 
 
 
-// let products = [];
 
-//     for(let i in panierFinal) {
-//         products.push(panierFinal[i].id);
+ fetch('http://localhost:3000/api/cameras/order', {
 
+        method: "POST",
+        headers: {
 
-//     };
+            "Content-Type": "application/json"
 
+        },
 
-//     console.log(products);
+        body: JSON.stringify(request)
 
-
-
-//  fetch('http://localhost:3000/api/cameras/order', {
-
-//         method: "POST",
-//         headers: {
-
-//             "Content-Type": "application/json"
-
-//         },
-
-//         body: JSON.stringify({ contact, products })
-
-//     })
+    })
 
    
 
-//     .then(response => response.json())
-//     .then(data => {
 
-//         sessionStorage.setItem("_id", JSON.stringify(data.formulaire));
-//         window.location.href = "validation.html";
+    .then(response => response.json())
+    .then(data => {
 
+        localStorage.setItem("_id", JSON.stringify(data._id));
+        window.location.href = 'validation.html';
 
-//     })
-
-//     .catch(err => console.log(`erreur message : ${err}`))
-
-
-
-
-// });
-
-
-
-
-
-
-
-
-// document.getElementById("formulaire").addEventListener("boutton", function() {
-
-//     let contact = {
-
-//         firstname: document.querySelector("#prenom").value,
-//         name: document.querySelector("#nom").value,
-//         address: document.querySelector("#adresse").value,
-//         mail: document.querySelector("#mail").value,
-//         city: document.querySelector("#ville").value,
         
+    
 
-//     }
+    })
 
-//     console.log(contact);
+    
 
+    .catch(err => console.log(`erreur message : ${err}`))
 
-// });
-
-
-
-
-
-
-// let panier = localStorage.getItem("panier");
-// let monPanier = JSON.parse(panier);
-// let products = [];
-
-
-// for(let i = 0; i < monPanier.length; i++) {
-
-//     products.push(monPanier[i].id);
-
-//     localStorage.setItem("id", JSON.stringify (products));
-
-
-// };
-
-
-// console.log(monPanier);
+    
+});
 
 
 
-
-
-
-
-// fetch('http://localhost:3000/api/cameras/order'), {
-
-//     method: "POST",
-//     headers: {
-
-//         "content-type": "application/json"
-
-//     },
-
-//     body: send
-
-//     // Il va falloir mettre les informations de "contact" et "produit" dans le body.
-
-// }
-
-
-
-// requete.addEventListener("load", function() {
-// alert(requete.responseText);
-
-// })
-
-// let send = JSON.stringify({contact, products});
-// requete.body(send) //body récupère la variable de "send"
 

@@ -314,6 +314,14 @@
     }
 
 
+    footer {
+
+        background: rgba(24, 1, 20, 0.651);
+        margin-top: 291px;
+    }
+    
+
+
 
 
 }
@@ -332,6 +340,16 @@
 
     }
 
+
+
+    footer {
+
+        background: rgba(24, 1, 20, 0.651);
+        margin-top: 351px;
+    }
+    
+    
+    
 
 
 
@@ -457,5 +475,114 @@
 
 
 
+/* PAGE DE VALIDATION */
 
 
+
+
+
+@media (min-width: 320px) {
+
+    
+    .validation {
+
+        margin: 20px;
+        
+
+    }
+    
+    
+    
+    .validation h1 {
+
+        font-size: 15px;
+                
+
+    }
+
+
+    .validation p {
+
+        margin: auto;
+        font-size: 15px;
+                
+
+    }
+
+
+}
+
+
+
+
+
+
+@media (min-width: 700px) {
+
+    .validation {
+
+        margin: auto;
+        width: 650px;
+        height: 300px;
+    }
+    
+   
+    
+    
+    
+    .validation h1 {
+
+        padding: 50px 0 0 0;
+        font-size: 30px;
+                
+
+    }
+
+
+    .validation p {
+
+        padding: 70px 0 0 0;
+        font-size: 19px;
+                
+
+    }
+
+
+}
+
+
+
+@media (min-width: 1000px) {
+
+    .validation {
+
+        margin: auto;
+        width: 850px;
+        height: 350px;
+
+    }
+    
+   
+    
+    
+    
+    .validation h1 {
+
+        padding: 60px 0 0 0;
+        font-size: 30px;
+                
+
+    }
+
+
+    .validation p {
+
+        padding: 40px 20px 50px 10px;
+        font-size: 19px;
+        margin-top: 50px;
+                
+
+    }
+
+
+}

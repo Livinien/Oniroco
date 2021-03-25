@@ -302,7 +302,7 @@ tbody td {
 
 
 
-/* COMMANDE */
+/* FORMULAIRE */
 
 
 
@@ -341,7 +341,7 @@ form {
 }
 
 
-.emailInp {
+input {
 
     display: block;
     justify-content: center;
@@ -384,7 +384,7 @@ form {
 
 
 
-.boutton {
+.button {
 
     display: block;
     justify-content: center;
@@ -403,7 +403,7 @@ form {
 }
 
 
-.boutton:hover {
+.button:hover {
 
     background: rgb(122, 19, 119);
 
@@ -416,6 +416,7 @@ form {
     display: flex;
     font-size: 15px;
     padding: 10px;
+    
     border-radius: 5px;
     border: 0;
     color: #fff;
@@ -424,6 +425,60 @@ form {
     font-family: 'poppins', sans-serif;
     cursor: pointer;
 }
+
+
+#erreur {
+
+    color: rgb(192, 2, 2);
+    margin-left: 30px;
+}
+
+
+
+
+
+
+
+
+
+/* PAGE DE VALIDATION */
+
+
+
+
+.validation {
+
+    background: rgb(147, 214, 121);
+    margin: 0 10px 0 10px;
+    border-radius: 10px;
+    
+}
+
+
+
+.validation h1 {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    font-size: 30px;
+    padding: 40px 0 0 0;
+    color: rgb(7, 59, 7);
+}
+
+
+
+.validation p {
+
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px 40px 10px;
+    margin-top: 20px;
+    color: rgb(7, 59, 7);
+    font-size: 25px;
+    
+}
+
 
 
 
@@ -462,64 +517,3 @@ footer {
 
 
 
-
-
-@media (min-width: 760px) {
-
-    
-    h1 {
-
-        font-size: 30px;
-        
-        
-    }
-
-
-
-    #main {
-
-        
-        display: flex;
-        
-
-    }
-
-
-
-
-    .photo {
-
-        display: flex;
-        flex-direction: column;
-           
-    }
-    
-
-
-    .image {
-        
-        width: 298px;
-    
-    }
-    
-
-
-
-    #produit {
-
-        width: 278px;
-        
-    
-    }
-
-
-    .camera {
-
-        display: flex;
-        justify-content: center;
-
-    }
-    
-
-
-}
