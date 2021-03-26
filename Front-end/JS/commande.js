@@ -42,47 +42,80 @@ for(let i = 0; i < panierTotal.length; i++) {
 
 
 
-
-
     });
 
 
  
- 
 };
+
 
 
 
 document.getElementById("formulaire").addEventListener("submit", function(e){
 
 
-
-
 let erreur;
 let prenom = document.getElementById("prenom");
+let firstname = /[a-zA-ZÀ-ÿ]/;
+
 let nom = document.getElementById("nom");
+let name = /[a-zA-Z]/;
+
 let adresse = document.getElementById("adresse");
+let boxmail = /[a-zA-Z0-9_]/;
+
 let ville = document.getElementById("ville");
+let city = /[a-zA-Z]/;
+
 let mail = document.getElementById("mail");
+let email = /[a-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,4}/;
+
+
+
+
 
 
 
     if(!ville.value) {
 
         erreur = "Entrez votre ville svp";
+
+    } else if (city.test(!ville.value) == false) {
+
+        erreur = "Ceci n'est pas le nom d'une ville";
+        return false
+
     }
+
 
 
     if(!mail.value) {
 
         erreur = "Entrez votre adresse mail svp";
-        let regMail = /[a-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,4}/;
+
+
+    } else if (email.test(!mail.value) == false) {
+
+        erreur = "Ceci n'est pas un adresse mail valide";
+        return false
+
     }
+
+
+
 
     if(!adresse.value) {
 
         erreur = "Entrez votre adresse postale svp";
+
+    } else if (boxmail.test(!adresse.value)== false) {
+
+        erreur = "Ceci n'est pas un adresse postale";
+        return false
+
     }
+
+
 
 
     if(!nom.value) {
@@ -90,11 +123,32 @@ let mail = document.getElementById("mail");
         erreur = "Entrez votre nom de famille svp";
     }
 
+    else if (name.test(!nom.value) == false) {
 
+        erreur = "Ceci n'est pas un nom de famille";
+        return false
+
+    }
+
+
+
+    
     if(!prenom.value) {
 
         erreur = "Entrez votre prénom svp";
+
+
+    } else if (firstname.test(!prenom.value) == false) {
+
+        erreur = "Ceci n'est pas un prénom";
+        return false
+
     }
+
+
+
+
+
 
 
 
@@ -174,19 +228,17 @@ console.log(request);
 
 
     .then(response => response.json())
-    .then(data => {
-
-        localStorage.setItem("_id", JSON.stringify(data._id));
-        window.location.href = 'validation.html';
+    .then(() => {
 
         
-    
+        window.location.href = 'validation.html';
+   
 
     })
 
     
 
-    .catch(err => console.log(`erreur message : ${err}`))
+    .catch(err => console.log("erreur : " + response.status))
 
     
 });
