@@ -289,9 +289,54 @@ thead th {
 }
 
 
+#thead2 {
+
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bold;
+    font-size: 20px;
+    height: 60px;
+    background: rgb(238, 166, 98);
+    
+    
+    
+}
+
+
+
+.resultat {
+
+    border: 1px solid black;
+    width: 100%;
+    margin-top: 20px;
+    
+}
+
+
+#thead2 .total {
+
+    display: flex;
+    width: 278px;
+    color: #fff;
+    background: rgb(49, 117, 49);
+    
+
+}
+
+
+#thead2 .prixTotal {
+
+    background: none;
+    width: 590px;
+    
+
+}
+
+
+
 tbody td {
 
-    padding: 25px;
+    padding: 25px 0 20px 5px;
 
 }
 
@@ -333,14 +378,6 @@ form {
 
 
 
-
-.Email {
-
-    margin-left: 30px;
-
-}
-
-
 input {
 
     display: block;
@@ -357,30 +394,6 @@ input {
 }
 
 
-
-
-.flexInp {
-
-    display: block;
-    justify-content: center;
-    margin: 20px auto;
-    outline: 0;
-    background: #f1f1f1;
-    width: 90%;
-    border: 0;
-    padding: 15px;
-    font-size: 15px;
-    border-radius: 5px;
-
-}
-
-
-.labelFlax {
-
-    margin-left: 30px;
-    
-
-}
 
 
 
@@ -411,12 +424,10 @@ input {
 
 
 
-#boutton {
+button {
 
-    display: flex;
     font-size: 15px;
     padding: 10px;
-    
     border-radius: 5px;
     border: 0;
     color: #fff;
@@ -427,15 +438,14 @@ input {
 }
 
 
+
+
+
 #erreur {
 
-    color: rgb(192, 2, 2);
-    margin-left: 30px;
+    color: rgb(161, 1, 1);
+
 }
-
-
-
-
 
 
 

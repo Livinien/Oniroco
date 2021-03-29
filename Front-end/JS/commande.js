@@ -3,11 +3,16 @@ let panierTotal = JSON.parse(monPanier);
 
 
 
+// PANIER //
+
+
+
 for(let i = 0; i < panierTotal.length; i++) {
 
     let monTableau = document.getElementById("table");
-    let ligne = monTableau.insertRow(-1);
+    let ligne = monTableau.insertRow();
     tbody.appendChild(ligne);
+
 
 
 
@@ -20,6 +25,7 @@ for(let i = 0; i < panierTotal.length; i++) {
     let boutton = document.createElement("button");
     boutton.setAttribute("id", panierTotal[i].id);
 
+
     cell1.appendChild(boutton);
     boutton.textContent = "Supprimer";
 
@@ -27,31 +33,69 @@ for(let i = 0; i < panierTotal.length; i++) {
     ligne.appendChild(cell1);
     cell2.textContent = panierTotal[i].price + " €";
 
-  
-
-    let bouttonSupprimer = document.getElementById(panierTotal[i].id);
-    bouttonSupprimer.addEventListener("click", function() {
 
 
-        if(boutton.id === panierTotal[i].id) { 
-            localStorage.getItem("panierTotal")
-            localStorage.removeItem(panierTotal[i]); 
-        
-        
-        }
 
+    boutton.addEventListener("click", function() {
+
+
+        panierTotal.splice(i)
+        localStorage.setItem("panier", JSON.stringify(panierTotal))
+        window.location.reload()
 
 
     });
 
 
- 
+
 };
 
 
 
+let prixTotal = [];
 
-document.getElementById("formulaire").addEventListener("submit", function(e){
+
+for (let m = 0; m < panierTotal.length; m++) {
+    let prixProduit = panierTotal[m].price;
+
+
+
+    prixTotal.push(prixProduit)
+
+
+
+    console.log(prixTotal);
+
+
+}
+
+
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+const prix = prixTotal.reduce(reducer, 0);
+console.log(prix);
+
+
+const affichage = `<th class= "prixTotal">${prix} €</th>`
+
+
+thead2.insertAdjacentHTML("beforeend", affichage);
+
+
+
+
+
+
+
+
+
+
+
+// FORMULAIRE //
+
+
+
+
+document.getElementById("formulaire").addEventListener("submit", function(e) {
 
 
 let erreur;
@@ -74,83 +118,73 @@ let email = /[a-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,4}/;
 
 
 
-
-
-    if(!ville.value) {
+    if(ville.value == "") {
 
         erreur = "Entrez votre ville svp";
 
-    } else if (city.test(!ville.value) == false) {
+    } else if (!city.test(ville)) {
 
         erreur = "Ceci n'est pas le nom d'une ville";
-        return false
+
 
     }
 
 
 
-    if(!mail.value) {
+    if(mail.value == "") {
 
         erreur = "Entrez votre adresse mail svp";
 
 
-    } else if (email.test(!mail.value) == false) {
+    } else if (!email.test(mail.value)) {
 
         erreur = "Ceci n'est pas un adresse mail valide";
-        return false
+
 
     }
 
 
 
 
-    if(!adresse.value) {
+    if(adresse.value == "") {
 
         erreur = "Entrez votre adresse postale svp";
 
-    } else if (boxmail.test(!adresse.value)== false) {
+    } else if (!boxmail.test(adresse.value)) {
 
         erreur = "Ceci n'est pas un adresse postale";
-        return false
 
     }
 
 
 
 
-    if(!nom.value) {
+    if(nom.value == "") {
 
         erreur = "Entrez votre nom de famille svp";
     }
 
-    else if (name.test(!nom.value) == false) {
+    else if (!name.test(nom.value))  {
 
         erreur = "Ceci n'est pas un nom de famille";
-        return false
+
 
     }
 
 
 
-    
-    if(!prenom.value) {
+
+    if(prenom.value == "") {
 
         erreur = "Entrez votre prénom svp";
 
 
-    } else if (firstname.test(!prenom.value) == false) {
+    } else if (!firstname.test(prenom.value)) {
 
         erreur = "Ceci n'est pas un prénom";
-        return false
+
 
     }
-
-
-
-
-
-
-
 
 
 
@@ -160,7 +194,7 @@ let email = /[a-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,4}/;
         e.preventDefault();
         document.getElementById("erreur").innerHTML = erreur;
 
-        return false;
+
     }
 
 
@@ -181,7 +215,7 @@ let email = /[a-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,4}/;
         address: adresse.value,
         city: ville.value,
         mail: mail.value,
-        
+
     };
 
     localStorage.setItem("contact", JSON.stringify(contact));
@@ -200,13 +234,12 @@ let email = /[a-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,4}/;
 
         contact : contact,
         products : products,
-    
+
     }
 
 
 
 
-console.log(request);
 
 
 
@@ -224,23 +257,23 @@ console.log(request);
 
     })
 
-   
+
 
 
     .then(response => response.json())
     .then(() => {
 
-        
+
         window.location.href = 'validation.html';
-   
+
 
     })
 
-    
+
 
     .catch(err => console.log("erreur : " + response.status))
 
-    
+
 });
 
 

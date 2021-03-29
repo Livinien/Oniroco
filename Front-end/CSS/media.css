@@ -145,7 +145,7 @@
     .image2 img {
     
         height: 900px;
-        width: 500px;
+        width: 800px;
         
     
     }
@@ -368,6 +368,17 @@
         
 
     }
+
+
+    
+button {
+
+    margin-left: 110px;
+  
+}
+
+
+
 
 
 
