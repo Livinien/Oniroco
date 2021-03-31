@@ -14,6 +14,36 @@
 }
 
 
+
+@media screen and (min-width: 620px) {
+
+    
+
+
+    .info ul {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+
+    }
+
+
+    .info a {
+
+        display: flex;
+        margin-left: 40px;
+
+    }
+
+
+
+
+
+}
+
+
+
 @media screen and (min-width: 760px) {
 
     #main {
@@ -69,32 +99,7 @@
 
 
 
-@media screen and (min-width: 620px) {
 
-    
-
-
-    .info ul {
-
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-
-    }
-
-
-    .info a {
-
-        display: flex;
-        margin-left: 40px;
-
-    }
-
-
-
-
-
-}
 
 
 
@@ -209,8 +214,6 @@
 
 
 
-
-
 }
 
 
@@ -259,133 +262,9 @@
     }
 
 
-}
-
-
-
-@media (min-width: 600px) {
-
-    .panier {
-
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        margin: auto;
-        width: 550px;
-        
-
-    }
-
-
-
 
 }
-
-
-@media (min-width: 1000px) {
-
-    .panier {
-
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        width: 800px;
-
-    }
-
-
-
-
-}
-
-
-
-
-@media (min-width: 320px) {
-
-    .container {
-
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        width: 100%;
-        
-
-    }
-
-
-    footer {
-
-        background: rgba(24, 1, 20, 0.651);
-        margin-top: 291px;
-    }
     
-
-
-
-
-}
-
-
-
-@media (min-width: 600px) {
-
-    .container {
-
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        width: 550px;
-        
-
-    }
-
-
-
-    footer {
-
-        background: rgba(24, 1, 20, 0.651);
-        margin-top: 351px;
-    }
-    
-    
-    
-
-
-
-}
-
-
-
-@media (min-width: 1000px) {
-
-    .container {
-
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        width: 800px;
-        
-
-    }
-
-
-    
-button {
-
-    margin-left: 110px;
-  
-}
-
-
-
-
-
-
-
-}
-
-
 
 
 
@@ -474,7 +353,6 @@ button {
 
 
 
-   
 
 }
 
@@ -486,7 +364,219 @@ button {
 
 
 
-/* PAGE DE VALIDATION */
+/* PAGE PANIER - PAGE 3 */
+
+
+
+@media (min-width: 320px) {
+
+
+    .panier {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+        width: 300px;
+        
+
+    }
+
+
+
+    tbody td {
+
+        padding: 20px 0 25px 5px;
+    
+    }
+    
+
+    #thead2 .total {
+
+        
+        width: 105px;
+        
+
+    }
+
+
+    button {
+       
+        margin-left: 10px;
+        
+    }
+
+
+    
+
+    .container {
+
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 100%;
+        
+
+    }
+
+
+    .boutton {
+
+        display: flex;
+        justify-content: center;
+        
+
+    }
+
+
+    footer {
+
+        background: rgba(24, 1, 20, 0.651);
+        margin-top: 291px;
+    }
+    
+
+
+
+
+}
+
+
+
+@media (min-width: 600px) {
+
+
+    .panier {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+        width: 500px;
+        
+
+    }
+
+
+
+    tbody td {
+
+        padding: 20px 0 25px 25px;
+    
+    }
+    
+
+    #thead2 .total {
+
+        
+        width: 170px;
+        
+    
+    }
+
+
+    button {
+
+       
+        margin-left: 30px;
+        
+    }
+    
+    
+
+
+    .container {
+
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 550px;
+        
+
+    }
+
+
+
+    footer {
+
+        background: rgba(24, 1, 20, 0.651);
+        margin-top: 351px;
+    }
+    
+    
+
+
+
+
+}
+
+
+
+@media (min-width: 1000px) {
+
+
+    .panier {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+        width: 800px;
+        
+
+    }
+
+
+
+    
+    #thead2 .total {
+
+        
+        width: 280px;
+        
+        
+    
+    }
+
+
+
+    .container {
+
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 800px;
+        
+
+    }
+
+
+    
+    button {
+
+        margin-left: 110px;
+    
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* PAGE DE VALIDATION - PAGE 4 */
 
 
 

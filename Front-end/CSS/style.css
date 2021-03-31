@@ -226,6 +226,10 @@ h1 {
 
 
 
+
+
+
+
 /* PANIER */
 
 
@@ -289,6 +293,17 @@ thead th {
 }
 
 
+
+
+.resultat {
+
+    border: 1px solid black;
+    margin-top: 20px;
+    
+}
+
+
+
 #thead2 {
 
     display: flex;
@@ -304,19 +319,11 @@ thead th {
 
 
 
-.resultat {
-
-    border: 1px solid black;
-    width: 100%;
-    margin-top: 20px;
-    
-}
-
 
 #thead2 .total {
 
     display: flex;
-    width: 278px;
+    width: 110px;
     color: #fff;
     background: rgb(49, 117, 49);
     
@@ -336,10 +343,34 @@ thead th {
 
 tbody td {
 
-    padding: 25px 0 20px 5px;
+    padding: 20px 0 25px 5px;
 
 }
 
+
+
+button {
+
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    color: #fff;
+    background: red;
+    font-family: 'poppins', sans-serif;
+    cursor: pointer;
+    margin: auto;
+}
+
+
+
+
+
+#erreur {
+
+    color: rgb(161, 1, 1);
+
+}
 
 
 
@@ -351,7 +382,96 @@ tbody td {
 
 
 
-.commande {
+.formulaire {
+
+   
+    background-color: rgb(238, 166, 98);
+    margin-top: 150px;
+    overflow: hidden;
+    
+
+}
+
+
+
+
+.header {
+
+    text-align: center;
+    padding: 20px;
+    
+
+}
+
+
+.main-form {
+
+    padding: 30px 40px;
+
+}
+
+.form {
+
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    position: relative;
+
+}
+
+
+
+.form input {
+
+    border: 2px solid #fff;
+    border-radius: 4px;
+    font-family: inherit;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+
+}
+
+
+.form i {
+
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    visibility: hidden;
+}
+
+
+.form small {
+    
+    position: absolute;
+    bottom: 0;
+    left: 2px;
+    visibility: hidden;
+
+}
+
+.btn {
+
+    padding: 10px;
+    cursor: pointer;
+    background: rgb(67, 3, 73);
+    outline: none;
+
+}
+
+
+.btn:hover {
+
+    background-color: rgb(124, 7, 160);
+
+
+}
+
+
+
+
+/* .commande {
 
     background: rgb(238, 111, 61);
     margin-top: 90px;
@@ -397,7 +517,7 @@ input {
 
 
 
-.button {
+.boutton {
 
     display: block;
     justify-content: center;
@@ -423,29 +543,13 @@ input {
 }
 
 
-
-button {
-
-    font-size: 15px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 0;
-    color: #fff;
-    background: red;
-    margin-left: 30px;
-    font-family: 'poppins', sans-serif;
-    cursor: pointer;
-}
+ */
 
 
 
 
 
-#erreur {
 
-    color: rgb(161, 1, 1);
-
-}
 
 
 

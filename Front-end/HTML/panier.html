@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Front-end/CSS/style.css">
     <link rel="stylesheet" href="/Front-end/CSS/media.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="shortcut icon" type="image/png" href="/Front-End/Images/Favicon.jpg">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -83,12 +84,11 @@
                 <th>Prix</th>
                 <th>Supprimer</th>
                 
+                
             
             </thead>
 
 
-
-        
 
             <tbody id="tbody">
 
@@ -97,12 +97,6 @@
               
             </tbody>
 
-
-
-
-            
-
-            
 
 
         </table>
@@ -129,10 +123,6 @@
 
 
 
-       
-
-
-
     </section>
 
 
@@ -142,8 +132,95 @@
 
 
 
+    <div class="formulaire">
 
-<section class="container">
+        <div class="header">
+
+            <h2>Formulaire de Commande</h2>
+
+        
+
+            <form class="main-form" method="POST" onsubmit="return myFun()">
+
+                <div class="form">
+
+                    <label for="">Prénom</label>
+                    <input type="text" placeholder="Entrez votre Prénom" id="firstname" autocomplete="off" pattern="^[( )a-zA-Z]+$">
+                    <i class="fas sucess">&#xf058</i>
+                    <i class="fas error">&#xf06a</i>
+                    <small class="message">Erreur Message</small>
+
+                </div>
+
+
+ 
+                
+
+                <div class="form">
+
+                    <label for="">Nom</label>
+                    <input type="text" placeholder="Entrez votre Nom" id="lastname" autocomplete="off"  pattern="^[( )a-zA-Z]+$">
+                    <i class="fas sucess">&#xf058</i>
+                    <i class="fas error">&#xf06a</i>
+                    <small class="message">Erreur Message</small>
+
+                </div>
+
+
+
+                <div class="form">
+
+                    <label for="">Adresse</label>
+                    <input type="text" placeholder="Entrez votre Adresse Postale" id="address" autocomplete="off" pattern="[a-zA-Z0-9_]">
+                    <i class="fas sucess">&#xf058</i>
+                    <i class="fas error">&#xf06a</i>
+                    <small class="message">Erreur Message</small>
+
+                </div>
+
+
+                <div class="form">
+
+                    <label for="">Adresse Mail</label>
+                    <input type="email" placeholder="Entrez votre Adresse Mail" id="email" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$">
+                    <i class="fas sucess">&#xf058</i>
+                    <i class="fas error">&#xf06a</i>
+                    <small class="message">Erreur Message</small>
+
+                </div>
+
+
+
+                <div class="form">
+
+                    <label for="">Ville</label>
+                    <input type="text" placeholder="Entrez votre Ville" id="city" autocomplete="off" pattern="^[( )a-zA-Z]+$">
+                    <i class="fas sucess">&#xf058</i>
+                    <i class="fas error">&#xf06a</i>
+                    <small class="message">Erreur Message</small>
+
+                </div>
+
+
+
+                <button class="btn">Confirmer la Commande</button>
+
+
+
+            </form>
+
+        </div>
+        
+    </div>
+
+
+
+
+
+
+
+
+<!-- <section class="container">
     
 
 
@@ -170,7 +247,7 @@
 
 
 
-            <input type="submit" value="Accédez au Payment" class="button">
+            <input type="submit" value="Confirmer la Commande" class="boutton">
 
 
 
@@ -185,7 +262,7 @@
 
 
 
-</section>
+</section> -->
 
 
 
