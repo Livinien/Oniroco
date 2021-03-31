@@ -6,6 +6,7 @@ fetch('http://localhost:3000/api/cameras')
 
         
         
+        
         for(let i = 0; i < data.length; i++) {
         
             let main = document.querySelector('#main');
