@@ -1,14 +1,14 @@
+let total = localStorage.getItem("total");
+let resultat = JSON.parse(total);
+
+let commande = localStorage.getItem("id");
+let identite = JSON.parse(commande);
+console.log(identite)
 
 
-
-
-
-
-
-// let p3 = document.createElement("p");
-// document.createElement("p");
-// body.appendChild(p3);
-// let min = 1;
-// let max = 100000000;
-// let random = Math.floor(Math.random() * (max - min)) + min;
-// p3.textContent = " Identifiant de  commande à conserver : " + random ;
+let div = document.createElement('div');
+div.id = "div1";
+let validationCommande = document.createElement("p")
+validationCommande.textContent = identite;
+let validation = document.getElementById("div1");
+validation.appendChild(validationCommande);

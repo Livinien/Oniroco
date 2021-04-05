@@ -7,7 +7,7 @@ let panierTotal = JSON.parse(monPanier);
 
 
 
-for(let i = 0; i < panierTotal.length; i++) {
+for (let i = 0; i < panierTotal.length; i++) {
 
     let monTableau = document.getElementById("table");
     let ligne = monTableau.insertRow();
@@ -40,10 +40,14 @@ for(let i = 0; i < panierTotal.length; i++) {
 
 
 
+    // BOUTTON ROUGE "SUPPRIMER" //
+
+
+
     boutton.addEventListener("click", function() {
 
 
-        panierTotal.splice(i)
+        panierTotal.splice(i, 1)
         localStorage.setItem("panier", JSON.stringify(panierTotal))
         window.location.reload()
 
@@ -62,26 +66,33 @@ for(let i = 0; i < panierTotal.length; i++) {
 // INDIQUER LE PRIX TOTAL DES COMMANDES //
 
 
+
+
 let prixTotal = [];
 
 
 for (let m = 0; m < panierTotal.length; m++) {
     let prixProduit = panierTotal[m].price;
-
+    
 
 
     prixTotal.push(prixProduit)
 
-
-
-
-
 }
+
+
+
+
+
 
 
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
 const prix = prixTotal.reduce(reducer, 0);
+
 console.log(prix);
+
+
+localStorage.setItem("total", JSON.stringify(prix));
 
 
 const affichage = `<th class= "prixTotal">${prix} €</th>`
@@ -102,6 +113,8 @@ thead2.insertAdjacentHTML("beforeend", affichage);
 // FORMULAIRE //
 
 
+let testPassed = 0;
+
 function myFun() {
 
     firstName = document.getElementById('firstname'),
@@ -114,7 +127,7 @@ function myFun() {
     sucess = document.getElementsByClassName('sucess'),
     error = document.getElementsByClassName('error')
 
-
+    testPassed = 0;
 
 
 
@@ -142,6 +155,7 @@ function myFun() {
         error[0].style.visibility = 'visible';
         error[0].style.color = 'red';
 
+        
 
     }
     
@@ -153,6 +167,7 @@ function myFun() {
         sucess[0].style.visibility = 'visible';
         sucess[0].style.color = 'green';
 
+        testPassed++;
 
     }
 
@@ -207,6 +222,7 @@ function myFun() {
         sucess[1].style.visibility = 'visible';
         sucess[1].style.color = 'green';
 
+        testPassed++;
 
     }
 
@@ -266,6 +282,7 @@ function myFun() {
         sucess[2].style.visibility = 'visible';
         sucess[2].style.color = 'green';
 
+        testPassed++;
 
     }
 
@@ -312,6 +329,8 @@ function myFun() {
         sucess[3].style.visibility = 'visible';
         sucess[3].style.color = 'green';
 
+        testPassed++;
+
     }
 
 
@@ -357,6 +376,7 @@ function myFun() {
         sucess[4].style.visibility = 'visible';
         sucess[4].style.color = 'green';
 
+        testPassed++;
 
     }
 
@@ -378,15 +398,130 @@ function myFun() {
 }
 
 
-let myform = document.getElementById("myform");
 
-myform.addEventListener("submit", function(e) {
+
+
+// ENVOYER LE FORMULAIRE AU SERVEUR DE L'API //
+
+// METHODE POST //
+
+
+
+
+    let myform = document.getElementById("myform");
+        
+
+    myform.addEventListener("submit", (e) => {
+        
+        e.preventDefault()
+        myFun();
+
+
+        let input = document.getElementsByTagName("input");
+        if(testPassed == input.length) {
+
+
+
+
+
+
     
-    e.preventDefault();
-    myFun();
+
+        const contact = {
+        
+            firstName: document.getElementById('firstname').value,
+            lastName: document.getElementById('lastname').value,
+            address: document.getElementById('address').value,
+            city: document.getElementById('city').value,
+            email: document.getElementById('email').value,
+
+        }
+
+
+
+
+        const products = [];
+        
+            for(let i = 0; i < panierTotal.length; i++) {
+                products.push(panierTotal[i].id);
+                localStorage.setItem("id", JSON.stringify(products));
+                
+            };
+
+
+
+        const command = 
+
+            JSON.stringify({
+                
+            "contact": contact,
+            "products": products
+        
+        
+        });
+        
+        
+
+            console.log(command)
+
+
+    
+function data() {
+
+
+    fetch('http://localhost:3000/api/cameras/order', {
+
+        method: "POST",
+
+        headers: {
+
+            "Content-Type": "application/json"
+
+        },
+
+        body: JSON.stringify(command),
+        
+    })
+
+
+    .then(response => response.json())
+    
+
+
+        window.location.href = 'validation.html';
+
+
+    }
+
+    
+    } else {
+
+        console.error("Ce formulaire est invalide !");
+
+    }
+
+
+
+data()
 
 
 });
+
+
+
+
+
+
+
+        
+
+
+    
+
+
+
+
+
 
 
 
