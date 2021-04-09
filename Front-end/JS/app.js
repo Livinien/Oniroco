@@ -1,11 +1,18 @@
 
 
-fetch('http://localhost:3000/api/cameras')
+// CREATION DU FETCH POUR RECUPERER LES DONNEES DE CAMERAS //
+
+
+
+fetch('http://localhost:3000/api/cameras/') 
     .then(res => res.json())
     .then(data => {
 
         
-        
+
+        // CREATION D'UNE BOUCLE POUR STRUCTURER L'HTML // 
+
+
         
         for(let i = 0; i < data.length; i++) {
         
@@ -17,7 +24,6 @@ fetch('http://localhost:3000/api/cameras')
             main.appendChild(camera);
 
             
-        
 
             let image = document.createElement('img');
             image.setAttribute("class", 'image');
@@ -40,13 +46,13 @@ fetch('http://localhost:3000/api/cameras')
             camera.appendChild(produit);
 
 
+            // ECOUTE DE L'EVENEMENT AU CLIC //
+
             produit.addEventListener('click', (e) => {
                 e.preventDefault()
                 window.location = 'camera.html?id=' + data[i]._id;
 
             });
-
-            
 
 
         
@@ -56,7 +62,13 @@ fetch('http://localhost:3000/api/cameras')
 
 })
 
+
+// LE CATCH PERMET D'EVITER LE BUG DE L'APPLICATION EN CAS D'ERREUR //
+
+
 .catch(error => alert("Erreur : " + error));
+
+
 
 
 

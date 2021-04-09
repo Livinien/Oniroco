@@ -585,7 +585,7 @@
 @media (min-width: 320px) {
 
     
-    .validation {
+    #validation {
 
         margin: 20px;
         
@@ -594,7 +594,7 @@
     
     
     
-    .validation h1 {
+    #validation h1 {
 
         font-size: 15px;
                 
@@ -602,7 +602,7 @@
     }
 
 
-    .validation p {
+    #validation p {
 
         margin: auto;
         font-size: 15px;
@@ -620,18 +620,18 @@
 
 @media (min-width: 700px) {
 
-    .validation {
+    #validation {
 
         margin: auto;
         width: 650px;
-        height: 300px;
+        height: 750px;
     }
     
    
     
     
     
-    .validation h1 {
+    #validation h1 {
 
         padding: 50px 0 0 0;
         font-size: 30px;
@@ -640,9 +640,9 @@
     }
 
 
-    .validation p {
+    #validation p {
 
-        padding: 70px 0 0 0;
+        padding: 40px 0 0 20px;
         font-size: 19px;
                 
 
@@ -655,11 +655,11 @@
 
 @media (min-width: 1000px) {
 
-    .validation {
+    #validation {
 
         margin: auto;
         width: 850px;
-        height: 350px;
+        height: 750px;
 
     }
     
@@ -667,7 +667,7 @@
     
     
     
-    .validation h1 {
+    #validation h1 {
 
         padding: 60px 0 0 0;
         font-size: 30px;
@@ -676,9 +676,9 @@
     }
 
 
-    .validation p {
+    #validation p {
 
-        padding: 40px 20px 50px 10px;
+        padding: 0px 20px 0px 10px;
         font-size: 19px;
         margin-top: 50px;
                 

@@ -560,7 +560,7 @@ input {
 
 
 
-.validation {
+#validation {
 
     background: rgb(147, 214, 121);
     margin: 0 10px 0 10px;
@@ -570,7 +570,7 @@ input {
 
 
 
-.validation h1 {
+#validation h1 {
 
     display: flex;
     justify-content: center;
@@ -582,16 +582,19 @@ input {
 
 
 
-.validation p {
+#validation p {
 
     display: flex;
     justify-content: center;
-    padding: 20px 10px 40px 10px;
+    padding: 20px 10px 20px 10px;
     margin-top: 20px;
     color: rgb(7, 59, 7);
-    font-size: 25px;
+    font-size: 20px;
     
 }
+
+
+
 
 
 

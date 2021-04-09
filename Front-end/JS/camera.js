@@ -1,9 +1,13 @@
+
+
+// CE QUI PERMET DE RECUPERER LE PARAMETRE ID DANS L'URL //
+
 const urlCamera = new URLSearchParams(window.location.search);
 const idCamera = urlCamera.get("id");
 
 
 
-
+// RECUPERER L'ID DU PRODUIT UNIQUE SELECTIONNER //
 
 function getCamera(data, idCamera) {
 
@@ -13,9 +17,16 @@ function getCamera(data, idCamera) {
 }
 
 
+
+// CREATION DU FETCH POUR RECUPERER L'ID DE LA CAMERA UNIQUE //
+
+
 fetch('http://localhost:3000/api/cameras/' + idCamera)
 .then(res => res.json())
 .then(myCamera => {
+
+
+    // CONSTRUCTION DU HTML EN JAVASCRIPT //
 
     
     let section = document.querySelector('.camera');
@@ -55,6 +66,9 @@ fetch('http://localhost:3000/api/cameras/' + idCamera)
     let myLenses = myCamera.lenses;
 
 
+
+    // BOUCLE "FOR" POUR CREER LA LISTE DEROULANTE DES LENTILLES //
+
    
     for(let i = 0; i < myLenses.length; i++) {
 
@@ -67,11 +81,19 @@ fetch('http://localhost:3000/api/cameras/' + idCamera)
 
     
 
+
+    // CREATION DU BOUTTON "AJOUT AU PANIER" //
+
+
     let boutton = document.createElement('button');
     boutton.setAttribute("class", 'btn-produit2');
     boutton.textContent = `Ajouter au Panier`;
     camera.appendChild(boutton);
 
+
+
+
+    // REDIRECTION VERS LA PAGE PANIER //
 
 
     boutton.addEventListener('click', (e) => {
@@ -88,6 +110,12 @@ fetch('http://localhost:3000/api/cameras/' + idCamera)
         };
 
 
+
+        // INTRODUIRE UNE CONDITION //
+
+        // AJOUTE MOI LES PRODUITS AU PANIER //
+
+
         let products = JSON.parse(localStorage.getItem("panier"))
         
         if(products) {
@@ -98,6 +126,7 @@ fetch('http://localhost:3000/api/cameras/' + idCamera)
         }
 
 
+        // SINON AVEC "ELSE" ET BIEN TU ME CREE UN TABLEAU POUR METTRE LE PRODUIT DEDANS // 
 
         else {
 
@@ -111,8 +140,14 @@ fetch('http://localhost:3000/api/cameras/' + idCamera)
         e.preventDefault()
 
 
+
+        // POPUP POUR AFFICHER QUE LE PRODUIT A BIEN ETE AJOUTE AU PANIER //
+
         
         alert("Votre produit a été ajoutée au panier");
+
+
+        // REDIRECTION VERS LA PAGE PANIER //
 
         window.location.href = 'panier.html';
          
