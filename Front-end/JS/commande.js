@@ -63,6 +63,7 @@ for (let i = 0; i < panierTotal.length; i++) {
   // BOUTTON ROUGE "SUPPRIMER", PERMET DE SUPPRIMER N'IMPORTE QUELLE CAMERA DU PANIER //
 
   boutton.addEventListener("click", function () {
+    // SPLICE permet de supprimer n'importe quelle caméra dans le panier en prenant "i" pour l'index de chaque caméra et "1" pour pouvoir les supprimer à l'unité présentes dans le panier //
     panierTotal.splice(i, 1);
     localStorage.setItem("panier", JSON.stringify(panierTotal));
     window.location.reload();
@@ -74,7 +75,6 @@ for (let i = 0; i < panierTotal.length; i++) {
 // INDIQUER LE PRIX TOTAL DES COMMANDES //
 
 let prixTotal = [];
-
 
 
 
@@ -120,7 +120,7 @@ function myFun() {
     (city = document.getElementById("city")),
     (message = document.getElementsByClassName("message")),
     (icon = document.querySelector("i"));
-  (sucess = document.getElementsByClassName("sucess")),
+    (sucess = document.getElementsByClassName("sucess")),
     (error = document.getElementsByClassName("error"));
 
   testPassed = 0;
@@ -344,9 +344,17 @@ myform.addEventListener("submit", (e) => {
 
 
     const command = {
+      
       contact: contact,
       products: products,
+
     };
+
+
+    
+    const orderId = response.orderId;
+    localStorage.setItem("order", orderId)
+
 
     console.log(command);
 
@@ -374,9 +382,9 @@ myform.addEventListener("submit", (e) => {
       //aboutissement de la promesse //
       .then(response => {
 
-        
+       
 
-        //window.location.href = 'validation.html';
+        window.location.href = 'validation.html';
     
 
         console.log(response);
@@ -389,9 +397,6 @@ myform.addEventListener("submit", (e) => {
     
 
   }
-
- 
-  
 
 
   } else {

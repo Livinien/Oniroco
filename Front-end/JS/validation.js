@@ -1,13 +1,13 @@
+
+// RECUPERATION DU PRIX TOTALE DE LA COMMANDE DEPUIS LE LE LOCALSTORAGE //
+
 let total = localStorage.getItem("total");
 let resultat = JSON.parse(total);
 
-let commande = localStorage.getItem("id");
-let identite = JSON.parse(commande);
+// RECUPERATION DE L'ID DE LA COMMANDE DEPUIS LE LOCALSTORAGE //
+
+let identite = localStorage.getItem("order");
 console.log(identite)
-
-
-let contact = localStorage.getItem("validation");
-console.log(contact)
 
 
 
@@ -17,21 +17,39 @@ let valide = document.getElementById("validation");
 valide.appendChild(div);
 
 
+let contact = localStorage.getItem("validation");
+let info = JSON.parse(contact);
+console.log(info)
+
+
+
+
+
+
+// RECAPITULATIF DE LA COMMANDE //
+
+
 let p = document.createElement("p");
 div.appendChild(p);
 p.textContent = "Votre récapitulatif de votre commande"
 
+
+
 let pcontact = document.createElement("p");
 div.appendChild(pcontact);
-pcontact.textContent = contact;
+pcontact.innerHTML = info.firstName + info.lastName + info.address + info.city + info.email;
+
+
+
+
+
+
+// ID DE LA COMMANDE //
 
 
 let paragraphe = document.createElement("p");
 div.appendChild(paragraphe);
 paragraphe.textContent = "Numéro de votre commande"
-
-
-
 
 
 
@@ -44,6 +62,8 @@ validation.appendChild(validationCommande);
 
 
 
+
+// LE MONTANT TOTAL //
 
 
 let montant = document.createElement("p");
