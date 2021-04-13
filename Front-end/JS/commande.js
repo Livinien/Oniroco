@@ -113,7 +113,8 @@ thead2.insertAdjacentHTML("beforeend", affichage);
 let testPassed = 0;
 
 function myFun() {
-  (firstName = document.getElementById("firstname")),
+  
+    (firstName = document.getElementById("firstname")),
     (lastName = document.getElementById("lastname")),
     (address = document.getElementById("address")),
     (email = document.getElementById("email")),
@@ -352,9 +353,6 @@ myform.addEventListener("submit", (e) => {
 
 
     
-    const orderId = response.orderId;
-    localStorage.setItem("order", orderId)
-
 
     console.log(command);
 
@@ -382,7 +380,12 @@ myform.addEventListener("submit", (e) => {
       //aboutissement de la promesse //
       .then(response => {
 
-       
+
+        
+        const orderId = response.orderId;
+        localStorage.setItem("order", orderId)
+
+
 
         window.location.href = 'validation.html';
     
