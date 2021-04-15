@@ -437,6 +437,29 @@
     
 
 
+    /* FORMULAIRE */
+
+
+    .formulaire {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 50px auto;
+        width: 300px;
+        
+
+    }
+
+
+    .btn {
+
+        margin-right: 10px;
+        
+
+    }
+
+
 
 
 }
@@ -505,6 +528,28 @@
     
     
 
+    /* FORMULAIRE */
+
+
+
+    .formulaire {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 50px auto;
+        width: 500px;
+        
+
+    }
+
+
+    .btn {
+
+        margin: auto;
+        
+    }
+
 
 
 
@@ -561,6 +606,26 @@
 
 
 
+    /* FORMULAIRE */
+
+
+    .formulaire {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 50px auto;
+        width: 800px;
+        
+
+    }
+
+
+    .btn {
+
+        margin: auto;
+        
+    }
 
 
 
@@ -577,7 +642,6 @@
 
 
 /* PAGE DE VALIDATION - PAGE 4 */
-
 
 
 
