@@ -1,18 +1,7 @@
+function getCameraId() {
 
-
-// CE QUI PERMET DE RECUPERER LE PARAMETRE ID DANS L'URL //
-
-const urlCamera = new URLSearchParams(window.location.search);
-const idCamera = urlCamera.get("id");
-
-
-
-// RECUPERER L'ID DU PRODUIT UNIQUE SELECTIONNER //
-
-function getCamera(data, idCamera) {
-
-    let myCamera = data.find(data => data["id"] == idCamera);
-
+    const urlCamera = new URLSearchParams(window.location.search);
+    return urlCamera.get("id");
 
 }
 
@@ -21,23 +10,14 @@ function getCamera(data, idCamera) {
 // CREATION DU FETCH POUR RECUPERER L'ID DE LA CAMERA UNIQUE //
 
 
-fetch('http://localhost:3000/api/cameras/' + idCamera)
-.then(res => res.json())
-.then(myCamera => {
+function renderCameras(myCamera) {
 
-
-    // CONSTRUCTION DU HTML EN JAVASCRIPT //
-
-    
     let section = document.querySelector('.camera');
 
 
     let camera = document.createElement('div');
     camera.setAttribute("class", 'picture');
     section.appendChild(camera);
-
-    
-
 
     let image = document.createElement('img');
     image.setAttribute("class", 'image2');
@@ -66,10 +46,6 @@ fetch('http://localhost:3000/api/cameras/' + idCamera)
     let myLenses = myCamera.lenses;
 
 
-
-    // BOUCLE "FOR" POUR CREER LA LISTE DEROULANTE DES LENTILLES //
-
-   
     for(let i = 0; i < myLenses.length; i++) {
 
 
@@ -79,93 +55,60 @@ fetch('http://localhost:3000/api/cameras/' + idCamera)
 
     }
 
-    
+
+    let bouton = document.createElement('button');
+    bouton.setAttribute("class", 'btn-produit2');
+    bouton.textContent = `Ajouter au Panier`;
+    camera.appendChild(bouton);
 
 
-    // CREATION DU BOUTTON "AJOUT AU PANIER" //
+    bouton.addEventListener('click', (e) => {
 
-
-    let boutton = document.createElement('button');
-    boutton.setAttribute("class", 'btn-produit2');
-    boutton.textContent = `Ajouter au Panier`;
-    camera.appendChild(boutton);
-
-
-
-
-    // REDIRECTION VERS LA PAGE PANIER //
-
-
-    boutton.addEventListener('click', (e) => {
-        
-        
-        const produit = {
-
-            id: myCamera._id,
-            name: myCamera.name,
-            price: myCamera.price / 100,
-            image: myCamera.imageUrl,
-        
-
-        };
-
-
-
-        // INTRODUIRE UNE CONDITION //
-
-        // AJOUTE MOI LES PRODUITS AU PANIER //
-
-
-        let products = JSON.parse(localStorage.getItem("panier"))
-        
-        if(products) {
-
-            products.push(produit)
-            localStorage.setItem("panier", JSON.stringify(products))
-
-        }
-
-
-        // SINON AVEC "ELSE" ET BIEN TU ME CREE UN TABLEAU POUR METTRE LE PRODUIT DEDANS // 
-
-        else {
-
-            let produitList = []
-            produitList.push(produit)
-            localStorage.setItem("panier", JSON.stringify(produitList))
-        }
-
-
-
-        e.preventDefault()
-
-
-
-        // POPUP POUR AFFICHER QUE LE PRODUIT A BIEN ETE AJOUTE AU PANIER //
-
-        
+        e.preventDefault();
+        addCameraToCart(myCamera);
         alert("Votre produit a été ajoutée au panier");
-
-
-        // REDIRECTION VERS LA PAGE PANIER //
-
         window.location.href = 'panier.html';
-         
+    
+    });
     
 
-    });
+}
 
 
+function addCameraToCart(camera) {
+
+    const produit = {
+
+        id: camera._id,
+        name: camera.name,
+        price: camera.price / 100,
+        image: camera.imageUrl,
+    };
+
+
+    let products = JSON.parse(localStorage.getItem("panier"))
+    
+    if(!products) {
+  
+        products = []
+        
+    }
+
+    products.push(produit);
+
+    localStorage.setItem("panier", JSON.stringify(products));
 
   
-    console.log(myCamera);
+ 
+
+}
 
 
-})
-
-.catch(error => alert("Erreur : " + error));
 
 
+
+getCamera(getCameraId())
+.then(renderCameras);
 
 
 
