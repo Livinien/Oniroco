@@ -485,8 +485,8 @@ button {
 #validation {
 
     background: rgb(147, 214, 121);
-    margin: 0 10px 0 10px;
     border-radius: 10px;
+    height: 680px;
     
 }
 
@@ -517,7 +517,26 @@ button {
 
 
 
+#btn-produit3 {
 
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: rgb(20, 68, 10);
+}
+
+
+
+a {
+
+    text-decoration: none;
+
+}
 
 
 

@@ -652,7 +652,7 @@
     #validation {
 
         margin: 20px;
-        
+        height: 820px;
 
     }
     
@@ -675,10 +675,41 @@
     }
 
 
+    
+    #btn-produit3 {
+
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+        font-size: 13px;
+        background-color: rgb(20, 68, 10);
+    }
+
+
+
 }
 
 
+@media (min-width: 460px) {
 
+    #validation {
+
+        height: 730px;
+
+    }
+
+    #btn-produit3 {
+
+        display: flex;
+        justify-content: center;
+        margin: 25px auto;
+        font-size: 15px;
+        background-color: rgb(20, 68, 10);
+    }
+
+
+
+}
 
 
 
@@ -688,7 +719,7 @@
 
         margin: auto;
         width: 650px;
-        height: 750px;
+        height: 840px;
     }
     
    
@@ -723,7 +754,7 @@
 
         margin: auto;
         width: 850px;
-        height: 750px;
+        height: 920px;
 
     }
     

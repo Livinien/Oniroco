@@ -103,10 +103,6 @@ function addCameraToCart(camera) {
 
 }
 
-
-
-
-
 getCamera(getCameraId())
 .then(renderCameras);
 

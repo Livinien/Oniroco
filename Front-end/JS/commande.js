@@ -9,11 +9,10 @@ function getCart() {
 
 function deleteCartItem(cartItems, index) {
 
-      // SPLICE permet de supprimer n'importe quelle caméra dans le panier en prenant "i" pour l'index de chaque caméra et "1" pour pouvoir les supprimer à l'unité présentes dans le panier //
+      // SPLICE permet de supprimer n'importe quelle caméra dans le panier en prenant l'index de chaque caméra et "1" pour pouvoir les supprimer à l'unité présentes dans le panier //
       cartItems.splice(index, 1);
       localStorage.setItem("panier", JSON.stringify(cartItems));
       
-
 }
 
 
@@ -344,7 +343,6 @@ function sendOrder(cartItems) {
 
       order(command)
       .then(response => {
-
         const orderId = response.orderId;
         localStorage.setItem("order", orderId);
         window.location.href = "validation.html";
@@ -354,7 +352,7 @@ function sendOrder(cartItems) {
     })
   } else {
 
-    alert("Formulaire Valide");
+    alert("Formulaire Invalide");
 
   }
 
