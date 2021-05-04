@@ -98,8 +98,6 @@ function addCameraToCart(camera) {
 
     localStorage.setItem("panier", JSON.stringify(products));
 
-  
- 
 
 }
 

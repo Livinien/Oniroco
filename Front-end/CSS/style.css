@@ -527,13 +527,14 @@ button {
     padding: 15px;
     width: 200px;
     border-radius: 5px;
-    background-color: rgb(20, 68, 10);
+    
 }
 
 
 
 a {
 
+    
     text-decoration: none;
 
 }

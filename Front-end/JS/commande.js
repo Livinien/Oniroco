@@ -344,6 +344,7 @@ function sendOrder(cartItems) {
       order(command)
       .then(response => {
         const orderId = response.orderId;
+        localStorage.removeItem("panier");
         localStorage.setItem("order", orderId);
         window.location.href = "validation.html";
       
