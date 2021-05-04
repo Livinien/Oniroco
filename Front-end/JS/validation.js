@@ -37,8 +37,8 @@ function creatDiv(order) {
     
     let div = document.createElement('div');
     div.id = "div1";
-    let valide = document.getElementById("container");
-    valide.appendChild(div);
+    let container = document.getElementById("container");
+    container.appendChild(div);
 
     
 
