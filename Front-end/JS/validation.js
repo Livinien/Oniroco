@@ -38,7 +38,7 @@ function creatDiv(order) {
     let div = document.createElement('div');
     div.id = "div1";
     let container = document.getElementById("container");
-    container.appendChild(div);
+    container.insertAdjacentElement("beforebegin", div);
 
     
 
