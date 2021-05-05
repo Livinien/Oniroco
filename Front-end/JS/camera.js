@@ -1,3 +1,6 @@
+
+
+
 function getCameraId() {
 
     const urlCamera = new URLSearchParams(window.location.search);
@@ -74,6 +77,9 @@ function renderCameras(myCamera) {
 
 }
 
+
+
+// ENVOYE TOUTES LES INFORMATIONS DE LA CAMERA DANS LE LOCALSTORAGE AVEC "getItems" //
 
 function addCameraToCart(camera) {
 

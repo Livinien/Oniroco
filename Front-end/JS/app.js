@@ -1,4 +1,6 @@
 
+// AFFICHAGE DES CAMERAS //
+
 function renderCameras(data) {
 
     for(let i = 0; i < data.length; i++) {

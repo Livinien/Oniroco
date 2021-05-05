@@ -1,4 +1,6 @@
 
+
+
 function getCart() {
 
   const monPanier = localStorage.getItem("panier");
@@ -6,6 +8,8 @@ function getCart() {
 
 }
 
+
+// SUPPRIMER LA OU LES CAMERA(S) DU PANIER //
 
 function deleteCartItem(cartItems, index) {
 
@@ -16,6 +20,7 @@ function deleteCartItem(cartItems, index) {
 }
 
 
+// INSERET LA OU LES CAMERA(S) DANS LE TABLEAU DU PANIER //
 
 function renderCartItem(cartItems, i) {
 
@@ -83,7 +88,7 @@ function renderTotal(cartItems) {
       prixTotal += prixProduit;
     }
   
-   // "REDUCER" PERMET D'ADDITIONNER TOUS LES PRIX DES CAMERAS PRESENTS DANS LE PANIER POUR FAIRE LE TOTAL //
+   // STOCKAGE DU PRIX TOTAL DANS LE LOCALSTORAGE ET L'AFFICHER AVEC LES `` EN UTILISANT LE HTML A L'INTERIEUR //
 
    localStorage.setItem("total", JSON.stringify(prixTotal));
    const affichage = `<th class= "prixTotal">${prixTotal} €</th>`;
@@ -306,6 +311,9 @@ function formIsValid() {
   return errors === 0;
 }
 
+
+
+// ENVOIE DE LA COMMANDE - PANIER + FORMULAIRE DE CONTACT //
 
 
 function sendOrder(cartItems) {

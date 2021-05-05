@@ -3,7 +3,7 @@
 
 const order = getOrder();
 
-
+// RECUPERATION DE LA COMMANDE AFIN DE L'AFFICHER SUR LA PAGE DE VALIDATION //
 
 function getOrder() {
 
@@ -30,6 +30,8 @@ function getOrder() {
 }
 
 
+
+// AFFICHAGE DE LA COMMANDE DE L'UTILISATEUR //
 
 function creatDiv(order) {
 
