@@ -13,7 +13,7 @@ function getCameraId() {
 // CREATION DU FETCH POUR RECUPERER L'ID DE LA CAMERA UNIQUE //
 
 
-function renderCameras(myCamera) {
+function renderCamera(myCamera) {
 
     let section = document.querySelector('.camera');
 
@@ -108,7 +108,7 @@ function addCameraToCart(camera) {
 }
 
 getCamera(getCameraId())
-.then(renderCameras);
+.then(renderCamera);
 
 
 

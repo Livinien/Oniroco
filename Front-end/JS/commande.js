@@ -20,7 +20,7 @@ function deleteCartItem(cartItems, index) {
 }
 
 
-// INSERET LA OU LES CAMERA(S) DANS LE TABLEAU DU PANIER //
+// INSERET LA CAMERA DANS LE TABLEAU DU PANIER //
 
 function renderCartItem(cartItems, i) {
 
